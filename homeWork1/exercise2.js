@@ -6,10 +6,17 @@ function addMinutes(hours, minutes, minutesAdd) {
         allMinutes = allMinutes - (days * 24 * 60);
         hours = Math.floor(allMinutes / 60);
         minutes = allMinutes % 60;
-        console.log('Days:' + days + ' ' + 'times: ' + hours + ':' + minutes);
-
+        if (hours < 10 && minutes < 10) {
+            return 'Days:' + days + ' ' + 'times: 0' + hours + ':0' + minutes;
+        } else if (hours < 10 && minutes >= 10) {
+            return 'Days:' + days + ' ' + 'times: 0' + hours + ':' + minutes;
+        } if (hours >= 10 && minutes < 10) {
+            return 'Days:' + days + ' ' + 'times: ' + hours + ':0' + minutes;
+        } else {
+            return 'Days:' + days + ' ' + 'times: ' + hours + ':' + minutes;
+        }
     } else {
-        console.log('ERROR: Time no valid');
+        return 'ERROR: Time no valid';
     };
 }
 addMinutes(10, 11, 2001);

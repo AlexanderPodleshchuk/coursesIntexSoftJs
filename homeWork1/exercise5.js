@@ -5,7 +5,7 @@ function getSumm(n) {
         for (i = 0; i <= n; i++) {
             sum = sum + i;
         };
-        console.log('Sum: '+ sum);
+        return sum;
     } else {
         console.log('ERROR: Number no correct');
     }

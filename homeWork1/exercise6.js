@@ -5,4 +5,4 @@ function getMultiplicationTable(n) {
         console.log(n + ' * ' + i + ' = ' + (n * i));
     };
 }
-n>=0 ? getMultiplicationTable(n):console.log('ERROR: Number no correct');
+n >= 0 ? getMultiplicationTable(n) : console.log('ERROR: Number no correct');
